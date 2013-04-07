@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <title>Ticket Toaster | Home</title>
+    <title>Ticket Toaster | News</title>
     <meta charset="utf-8">
 
     <!-- Link styles -->
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="SpryAssets/SpryStackedContainers.css" rel="stylesheet" type="text/css">
 
     <!-- Link scripts -->
     <script src="https://www.google.com/jsapi"></script>
+<script src="SpryAssets/SpryData.js" type="text/javascript"></script>
+    <script src="SpryAssets/xpath.js" type="text/javascript"></script>
     <script>
         google.load("jquery", "1.7.1");
     </script>
     <script src="js/jquery.spinner.js"></script>
     <script src="js/script.js"></script>
+<script type="text/xml">
+<!--
+<oa:widgets>
+  <oa:widget wid="2567023" binding="#OAWidget" />
+</oa:widgets>
+-->
+</script>
 </head>
 <body>
-  <header><!-- Define the header section of the page -->
+
+    <header><!-- Define the header section of the page -->
 
         <h1 class="logo"><!-- Define the logo element --></h1>
 
@@ -30,16 +41,14 @@
 
         <nav><!-- Define the navigation menu -->
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li>
-                  <div align="left"><a href="#">Members</a></div>
-                </li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html">Home</a>/lin>                
+                <li><a href="bands.html">Bands</a></li>
+                <li class="active"><a href="#">News</a></li>
                 <li><a href="photos.html">Photos</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="forum.html">Forum</a></li>                
                 <li><a href="login.html">Login</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="cart.html">Stubs</a></li>                
+                <li><a href="cart.html">Stubs</a></li>              
             </ul>
         </nav>
 
@@ -49,4 +58,27 @@
         </form>
     <span class="active"><a href="#"><span class="logo"></span></a></span> </header>
     <span class="active"><span class="logo"><a href="#"><img src="images/logo_Small.png" alt="" align="left"></a></span></span>
+      
+      
+<div class="box box5">
+  <script type="text/javascript">
+// BeginOAWidget_Instance_2567023: #OAWidget
 
+ 
+ var ds1 = new Spry.Data.XMLDataSet("http://buzzworthy.mtv.com/feed", "rss/channel/item");
+ ds1.setColumnType("description", "html");
+
+
+
+// EndOAWidget_Instance_2567023
+  </script>
+  <div spry:region="ds1" class="StackedContainers">
+    <div spry:repeat="ds1" class="RowContainer">
+      <div class="RowColumn"><a href="{link/@href}">{title}</a></div>
+      <div class="RowColumn">{description}</div>
+    </div>
+  </div>
+</div>
+<div align="center"></div>
+</body>	
+</html>
