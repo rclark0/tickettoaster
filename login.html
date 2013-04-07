@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <title>Ticket Toaster | News</title>
+    <title>Ticket Toaster | Login</title>
     <meta charset="utf-8">
 
     <!-- Link styles -->
@@ -29,13 +29,13 @@
 
     <header><!-- Define the header section of the page -->
 
-        <h1 class="logo"><!-- Define the logo element --></h1>
+      <h1 class="logo"><!-- Define the logo element --></h1>
 
         <ul class="soc-ico"><!-- Define social icons -->
-            <li><a href="#"><img src="images/twitter48.png" alt=""></a></li>
-            <li><a href="#"><img src="images/google48.png" alt=""></a></li>
-            <li><a href="#"><img src="images/facebook48.png" alt=""></a></li>
-            <li><a href="#"><img src="images/stumbleupon48.png" alt=""></a></li>
+            <li><a href="twitter.com"><img src="images/twitter48.png" alt=""></a></li>
+            <li><a href="google.com/tickettoaster"><img src="images/google48.png" alt=""></a></li>
+            <li><a href="facebook.com"><img src="images/facebook48.png" alt=""></a></li>
+            <li><a href="stumbleupon.com"><img src="images/stumbleupon48.png" alt=""></a></li>
             <li><a href="#"><img src="images/rss48.png" alt=""></a></li>
         </ul>
 
@@ -59,27 +59,11 @@
     <span class="active"><a href="#"><span class="logo"></span></a></span> </header>
     <span class="active"><span class="logo"><a href="#"><img src="images/logo_Small.png" alt="" align="left"></a></span></span>
       
+
+      <input name="Username" type="text" value="Enter Username" size="25" maxlength="44">
+      <input name="password" type="password" value="Enter Password" size="25" maxlength="44">
       
-<div class="box box5">
-  <script type="text/javascript">
-// BeginOAWidget_Instance_2567023: #OAWidget
 
- 
- var ds1 = new Spry.Data.XMLDataSet("http://buzzworthy.mtv.com/feed", "rss/channel/item");
- ds1.setColumnType("description", "html");
-
-	 
-	
-// EndOAWidget_Instance_2567023
-  </script>
-  <div spry:region="ds1" class="StackedContainers">
-    <div spry:repeat="ds1" class="RowContainer">
-      <div class="RowColumn"><a href="{link/@href}">{title}</a></div>
-      <div class="RowColumn">{description}</div>
-    </div>
-  </div>
-</div>
-<div align="center"></div>
 </body>	
 </html>
 
